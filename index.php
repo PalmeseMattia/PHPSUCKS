@@ -13,7 +13,7 @@
 
 	<?php
 	include 'main.php';
-	$file = "../fdf2/src/main.c";
+	$file = "lorem.txt";
 	$dictionary = count_words($file);
 	?>
 
