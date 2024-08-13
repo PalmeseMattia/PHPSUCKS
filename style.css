@@ -1,0 +1,51 @@
+body {
+	background-image : url('mary.jpg');
+}
+
+.container {
+	display : flex;
+	flex: row;
+	height : 80%;
+	padding : 10;
+}
+
+.bible {
+	background-color : #f1dd78;
+	width : 50%;
+	height : 100%;
+	overflow-y:scroll;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-title {
+	width : 50%;
+	text-align: center;
+	background-color : white;
+	color : black;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 50%;
+	overflow-y:scroll;
+	height: 100%;
+	display:block;
+}
+
+td, th {
+	border: 2px solid black;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: white;
+}
+tr:nth-child(odd) {
+	background-color: #99cbff;
+}
