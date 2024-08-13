@@ -1,5 +1,6 @@
 body {
-	background-image : url('mary.jpg');
+	background-color : #282828;
+	font-family: 'Courier New', monospace;
 }
 
 .container {
@@ -10,10 +11,12 @@ body {
 }
 
 .bible {
-	background-color : white;
+	color : white;
+	will-change : transform;
 	width : 50%;
 	height : 100%;
 	overflow-y:scroll;
+	border: 2px solid white;
 }
 
 .center {
@@ -24,11 +27,11 @@ body {
 .center-title {
 	width : 50%;
 	text-align: center;
-	background-color : white;
-	color : black;
+	color : white;
 }
 
 table {
+	will-change : transform;
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
 	width: 50%;
@@ -38,6 +41,7 @@ table {
 }
 
 td, th {
+	width : 100%;
 	border: 2px solid black;
 	text-align: left;
 	padding: 8px;
@@ -47,5 +51,5 @@ tr:nth-child(even) {
 	background-color: white;
 }
 tr:nth-child(odd) {
-	background-color: #99cbff;
+	background-color: #A0A0A0;
 }

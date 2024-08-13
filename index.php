@@ -7,13 +7,13 @@
 <body>
 
 	<div class="center-title center">
-		<h2>List of words that appears in the Bible sorted by occurence!</h2>
+		<h2>LIST OF WORDS THAT APPEARS IN A TEXT SORTED BY OCCURENCE!</h2>
 		<h2>Made with PHP 8 with love <3 </h2>
 	</div>
 
 	<?php
 	include 'main.php';
-	$file = "bible_copy.txt";
+	$file = "bible.txt";
 	$dictionary = count_words($file);
 	?>
 
