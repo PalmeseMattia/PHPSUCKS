@@ -13,7 +13,10 @@
 
 	<?php
 	include 'main.php';
-	$file = "lorem.txt";
+	if ($argc < 2) {
+		exit("Please provide the file path!\nUsage: php index.php <file_path> OR make <file_path>\n");
+	}
+	$file = $argv[1];
 	$dictionary = count_words($file);
 	?>
 

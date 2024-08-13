@@ -1,7 +1,8 @@
 OUT = index.html
+FILENAME = lorem.txt
 
 all : index.php
-	php index.php > $(OUT)
+	php index.php $(FILENAME) > $(OUT)
 
 clean :
 	rm index.html
