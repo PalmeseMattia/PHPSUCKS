@@ -1,16 +1,18 @@
 <?php
 
-$blacklist = array("the", "and", "in", "of", "to", "a", "it", "", " ", "was", "that", "he", "i", "be", "is");
+$blacklist = array(" ", "");
+$trim_chars = "(){}[],.;!?:";
 
 function count_words($file_path)
 {
 	global $blacklist;
+	global $trim_chars;
 	$myfile = fopen($file_path, "r") or die("Unable to open file!");
 	$dict = array();
 	
 	while(!feof($myfile)) {
 		$line = strtolower(fgets($myfile));
-		$line = trim(trim($line), ",.;!?i:");	// Remove undesired characters
+		$line = trim(trim($line), $trim_chars);	// Remove undesired characters
 		$words = explode(" ", $line);
 		foreach($words as $word) {
 			if (!in_array($word, $blacklist)) {
@@ -36,6 +38,7 @@ function create_shade($r, $g)
 function print_colored_words($filepath, $dict)
 {
 	global $blacklist;
+	global $trim_chars;
 	$max = current($dict);
 	$red = array(255,0,0);
 	$green = array(0, 255, 0);
@@ -43,7 +46,7 @@ function print_colored_words($filepath, $dict)
 	
 	while(!feof($myfile)) {
 		$line = strtolower(fgets($myfile));
-		$line = trim(trim($line), ",.;!?i:");
+		$line = trim(trim($line), $trim_chars);
 		$words = explode(" ", $line);
 
 			foreach($words as $word) {

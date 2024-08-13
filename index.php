@@ -13,7 +13,7 @@
 
 	<?php
 	include 'main.php';
-	$file = "bible.txt";
+	$file = "../fdf2/src/main.c";
 	$dictionary = count_words($file);
 	?>
 
